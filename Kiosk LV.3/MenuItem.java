@@ -11,7 +11,6 @@ public class MenuItem {
         this.priceInfo = priceInfo;
     }
 
-    // Getter
     public String getName() {
         return name;
     }
@@ -22,18 +21,5 @@ public class MenuItem {
 
     public String getPriceInfo() {
         return priceInfo;
-    }
-
-    // Setter (필요하다면 추가)
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public void setPriceInfo(String priceInfo) {
-        this.priceInfo = priceInfo;
     }
 }
