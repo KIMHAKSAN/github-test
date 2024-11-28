@@ -1,10 +1,15 @@
-package com.example.kiosk;
+package Kiosk4;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        /**
+         * 메뉴 항목을 설정하여 카테고리별로 관리하기 위한 Menu 객체 생성
+         * - 각 메뉴를 카테고리별로 초기화하고 메뉴 항목을 추가
+         */
+
         // Burgers 메뉴 초기화
         Menu burgers = new Menu("Burgers");
         burgers.addMenuItem(new MenuItem("ShackBurger", 6.9, "토마토, 양상추, 쉑소스가 토핑된 치즈버거"));
@@ -23,13 +28,18 @@ public class Main {
         desserts.addMenuItem(new MenuItem("Ice Cream", 3.5, "바닐라 아이스크림"));
         desserts.addMenuItem(new MenuItem("Brownie", 4.0, "진한 초콜릿 브라우니"));
 
-        // 전체 메뉴 추가
+        /**
+         * 전체 메뉴 카테고리를 리스트로 추가
+         * - 메뉴 항목을 카테고리별로 묶어 전체 메뉴를 구성
+         */
         List<Menu> allMenus = new ArrayList<>();
         allMenus.add(burgers);
         allMenus.add(drinks);
         allMenus.add(desserts);
 
-        // Kiosk 실행
+        /**
+         * Kiosk 객체 생성 후 메뉴 출력 및 사용자 입력을 처리하는 start() 메서드 실행
+         */
         Kiosk kiosk = new Kiosk(allMenus);
         kiosk.start();
     }

@@ -1,8 +1,12 @@
-package com.example.kiosk;
+package Kiosk3;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Main 클래스는 키오스크 프로그램을 실행하는 진입점입니다.
+ * - 메뉴 항목을 생성하고 Kiosk 객체를 실행합니다.
+ */
 public class Main {
     public static void main(String[] args) {
         // 메뉴 항목 생성 및 초기화
@@ -14,6 +18,6 @@ public class Main {
 
         // Kiosk 객체 생성 및 실행
         Kiosk kiosk = new Kiosk(menuItems);
-        kiosk.start();
+        kiosk.start(); // 키오스크 프로그램 시작
     }
 }

@@ -1,4 +1,4 @@
-package com.example.kiosk;
+package Kiosk5;
 
 import java.util.List;
 import java.util.Scanner;
@@ -6,20 +6,39 @@ import java.util.Scanner;
 public class Kiosk {
     private List<Menu> menus; // 전체 메뉴 카테고리를 관리
 
+    /**
+     * Kiosk 객체를 생성하고 메뉴 목록을 초기화합니다.
+     *
+     * @param menus 메뉴 목록
+     */
     public Kiosk(List<Menu> menus) {
         this.menus = menus;
     }
 
     // Getter
+    /**
+     * 메뉴 목록을 반환합니다.
+     *
+     * @return 메뉴 목록
+     */
     public List<Menu> getMenus() {
         return menus;
     }
 
     // Setter
+    /**
+     * 메뉴 목록을 설정합니다.
+     *
+     * @param menus 새로운 메뉴 목록
+     */
     public void setMenus(List<Menu> menus) {
         this.menus = menus;
     }
 
+    /**
+     * Kiosk 프로그램을 시작합니다.
+     * 사용자가 메뉴를 선택하고 메뉴 항목을 선택하는 인터페이스를 제공합니다.
+     */
     public void start() {
         Scanner scanner = new Scanner(System.in);
 
@@ -58,6 +77,12 @@ public class Kiosk {
         scanner.close();
     }
 
+    /**
+     * 사용자가 선택한 메뉴의 항목을 처리합니다.
+     *
+     * @param scanner 입력을 받을 Scanner 객체
+     * @param selectedMenu 사용자가 선택한 메뉴
+     */
     private void handleMenuSelection(Scanner scanner, Menu selectedMenu) {
         while (true) {
             // 선택된 카테고리 메뉴 출력
